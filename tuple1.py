@@ -1,0 +1,33 @@
+t1=()
+lst1=list(t1)
+print('Enter values:')
+for i in range(0,5):
+    a=int(input())
+    lst1.append(a)
+t1=tuple(lst1)
+print('Original tuple is:',t1)
+b=int(input('Enter a value to add in last:'))
+t1=t1+(b,)
+print('Modified tuple is:',t1)
+lst1=list(t1)
+c=int(input('Enter a data to insert:'))
+d=int(input('Enter position to insert starting from 0:'))
+lst1.insert(d,c)
+t1=tuple(lst1)
+print('Modified tuple is:',t1)
+e=int(input('Enter the positon of the element to delete:'))
+lst1=list(t1)
+n=len(lst1)
+for i in range(0,n):
+    if(i==e):
+        lst1.remove(lst1[i])
+t1=tuple(lst1)
+print('Modified tuple is:',t1)
+x=int(input('Enter the data want to count:'))
+y=t1.count(x)
+if(y==1):
+    print("%d has not repeated"%x)
+else:
+    print("%d is repeated %d times"%(x,y-1))
+z=int(input('Enter value to search:'))
+print(z in t1)
